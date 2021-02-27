@@ -1,0 +1,59 @@
+Yep, This project helps us to predict whether an employee should get promotion or not, based on the Train and Test Datasets collected from kaggle datastore.
+I have imported some python packages, Machine learning Libraries, used a Machine Learning Algorithm called Decision Tree Classifier, in order to predict the Employee promotion status.
+
+Steps Performed are:
+1. Importing Datsets.(.csv files)
+
+2. Reading Datasets(pd.read_csv('file_name'))
+
+3. visualising the data inorder to know the relationship of the columns.
+(using visualization tools such as piecharts,stripplot,countplot,bar,boxenplot,box,matplotlib,seaborn library etc)
+
+4.OUTLIER DETECTION.
+Identifying OUTLIERS in our datasets using boxplots.
+
+5.Treatment of MISSING values.
+
+6. Univariate Analysis(Analysing single column).
+
+7. BiVariate Analysis(Analysing 2 columns and knowing their relationship)
+
+(Categorical-Categorical, Categorical-Numerical, Numerical-Numerical)
+
+8.Making Interactive Functionality using @interact_manual from ipywidgets library.
+
+9.MULTI VARIATE Analysis, making correlation heatmaps(knowing which two columns have highest correlation and which doesn't)
+
+10.Feature Engineering: Technique of identifying useful features from our datasets.
+
+11. Grouping and Filtering: using groupby() and filter fucntions investigating our datasets.
+Crosstab()-> helps us to identify how 1 column effects the other column.
+
+12.Making @interact_manual between the columns.
+(Categorical-Categorical, Categorical-Numerical, Numerical-Numerical)
+
+13.Dealing With Categorical Columns(converting String-Numerical using Labelencoder and by traditional .replace())
+
+14.Splitting our datasets(A=target_variable,B=rest of data)
+
+15.Resampling: Process of creating sample of data from existing dataset.
+using SMOTE algorithm which is an over_sampling method works to reduce imbalance in the dataset.
+Techniques of Resampling: oversampling,undersampling,cluster-based_sampling
+
+16.Feature Scaling: method of making all the features in our dataset share the same scale, if not used the higher values of 1 feature might dominate other values.
+Techniques: Standardization range[0 mean and variance 1], Normalization range[0-1]
+
+17.Predictive Modelling.
+-> Decision Tree Classifier.
+-> Train the model using resampled datasets.
+-> Analyse the Training and Testing Accuracies, make a CONFUSION MATRIX and visualize them using heatmap and identify the errors made by the model.
+
+18. Feature Selection of Decision Tree Model.
+using RFECV() -> selects the best features/columns from the dateset and eliminates the features/columns which are not contributing to best prediction outcome.(it is all done recursively)
+
+19.Prepare a Classification Report of (y_valid,y_predict) using the module classification_report imported from sklearn package.
+
+20. Finally, check the descriptive stats for the dataset and make some Real Time Predictions.
+	prediction = rfecv.predict.np_array(([[7,2,0,1,35,5,3,1,0,50,6,80,7,700]]))
+	print("Whether the Employee should get a Promotion : 1-> Promotion, and 0-> No Promotion :", predictions)
+	Whether the Employee should get a Promotion : 1-> Promotion, and 0-> No Promotion : [1]
